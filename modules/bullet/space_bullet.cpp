@@ -839,10 +839,10 @@ void SpaceBullet::check_body_collision() {
 			if (numContacts) {
 				btManifoldPoint &pt = contactManifold->getContactPoint(0);
 #endif
-				if (
-						pt.getDistance() <= 0.0 ||
-						bodyA->was_colliding(bodyB) ||
-						bodyB->was_colliding(bodyA)) {
+				// if (
+				// 		pt.getDistance() <= 0.0 ||
+				// 		bodyA->was_colliding(bodyB) ||
+				// 		bodyB->was_colliding(bodyA)) {
 
 					Vector3 collisionWorldPosition;
 					Vector3 collisionLocalPosition;
@@ -868,7 +868,7 @@ void SpaceBullet::check_body_collision() {
 						add_debug_contact(collisionWorldPosition);
 					}
 #endif
-				}
+				//}
 			}
 		}
 	}
